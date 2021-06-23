@@ -55,6 +55,7 @@ public class ModPaxel extends MiningToolItem
 		super(attackDamage, attackSpeed, material, TagInit.PAXEL_ADDITIONS, settings);
 	}
 
+
 	@Override
 	public boolean isSuitableFor(BlockState state) // Mining level checks for pickaxe functionality
 	{
@@ -67,8 +68,8 @@ public class ModPaxel extends MiningToolItem
 				if (!state.isOf(Blocks.IRON_BLOCK) && !state.isOf(Blocks.IRON_ORE) && !state.isOf(Blocks.LAPIS_BLOCK) && !state.isOf(Blocks.LAPIS_ORE)) 
 				{
 					Material material = state.getMaterial();
-	        
-					return material == Material.STONE || material == Material.METAL || material == Material.REPAIR_STATION || state.isOf(Blocks.NETHER_GOLD_ORE);
+
+					return material == Material.STONE || material == Material.METAL || material == Material.REPAIR_STATION || state.isOf(Blocks.NETHER_GOLD_ORE) || state.isOf(Blocks.AMETHYST_BLOCK);
 	            } 
 				else 
 				{
