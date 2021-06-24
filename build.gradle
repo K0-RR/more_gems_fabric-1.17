@@ -53,7 +53,7 @@ dependencies {
 		}
 
 	// Trinkets
-	modImplementation "dev.emi:trinkets:3.0.0"
+	//modImplementation "dev.emi:trinkets:3.0.0"
 
    	//modCompile "me.shedaniel:RoughlyEnoughItems:5.4.2"
 }

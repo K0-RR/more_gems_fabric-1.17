@@ -4,7 +4,8 @@
   "package": "com.kwpugh.more_gems.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "DefaultBiomeFeaturesMixin"
+    "DefaultBiomeFeaturesMixin",
+    "PlayerEntityMixin"
   ],
   "client": [
   ],

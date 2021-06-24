@@ -2,6 +2,7 @@ package com.kwpugh.more_gems.mixin;
 
 import java.util.Map;
 
+import com.kwpugh.more_gems.util.PlayerSpecialAbilities;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -14,8 +15,6 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 
@@ -36,9 +35,7 @@ public abstract class PlayerEntityMixin extends LivingEntity
 
         if (enchantments.containsKey(EnchantmentInnit.QUICKENING))
         {
-        	addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 20, 0));
-        	addStatusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 20, 0));
-        	addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 20, 0));
+            PlayerSpecialAbilities.giveQuickening(world, self, target_1);
         }
     }
 }

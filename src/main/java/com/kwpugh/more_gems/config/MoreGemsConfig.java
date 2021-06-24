@@ -113,12 +113,16 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		@Comment("***************"
 				+"\nEnchantments"
 				+"\n***************")
-		public boolean enableQuickening = false;
-		public boolean enableRazorSharpness = false;
-		public boolean enableShulkerBlade = false;
-		public boolean enableUntouchable = false;
-		public boolean enableFasterObsidian = false;
-		public float amountHalfHeartsQuickening = 10;
+		public boolean enableQuickening = true;
+		public boolean enableRazorSharpness = true;
+		public boolean enableShulkerBlade = true;
+		public boolean enableUntouchable = true;
+		public boolean enableFasterObsidian = true;
+		public float amountYellowHeartsQuickening = 10;
+		public int durationQuickening = 40;
+		public int strengthLevelQuickening = 1;
+		public int speedLevelQuickening = 1;
+		public int slownessLevelQuickening = 1;
 		public int enemySlownessDurationTicksQuickening = 300;
 		public float razorDamageIncrease = 6.0F;
 		public int untouchableDamage = 7;
