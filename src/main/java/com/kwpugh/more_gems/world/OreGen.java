@@ -13,6 +13,114 @@ import net.minecraft.world.gen.feature.OreFeatureConfig;
 
 public class OreGen
 
+ //1.17 world height version
+{
+	public static final MoreGemsConfig.Ores CONFIG = MoreGems.CONFIG.ORES;
+
+	static int citrineMaxLevel = CONFIG.citrineMaxLevel;
+	static int tourmalineMaxLevel = CONFIG.tourmalineMaxLevel;
+	static int amethystMaxLevel = CONFIG.amethystMaxLevel;
+	static int topazMaxLevel = CONFIG.topazMaxLevel;
+	static int alexandriteMaxLevel = CONFIG.alexandriteMaxLevel;
+	static int sapphireMaxLevel = CONFIG.sapphireMaxLevel;
+	static int rubyMaxLevel = CONFIG.rubyMaxLevel;
+	static int corundumMaxLevel = CONFIG.conrundumMaxLevel;
+	static int carbonadoMaxLevel = CONFIG.carbonadoMaxLevel;
+
+	public static final ConfiguredFeature<?, ?> ORE_CITRINE_OVERWORLD = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+					BlockInit.CITRINE_ORE.getDefaultState(),
+					CONFIG.citrineVeinSize)) // vein size
+			.uniformRange(YOffset.getBottom(), YOffset.fixed(citrineMaxLevel))
+			//.averageDepth(YOffset.fixed(50), (20))
+			.spreadHorizontally()
+			.repeat(CONFIG.citrinePerChunk); // number of veins per chunk
+
+
+	public static ConfiguredFeature<?, ?> ORE_TOURMALINE_OVERWORLD = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+					BlockInit.TOURMALINE_ORE.getDefaultState(),
+					CONFIG.tourmalineVeinSize)) // vein size
+			.uniformRange(YOffset.getBottom(), YOffset.fixed(tourmalineMaxLevel))
+			//.averageDepth(YOffset.fixed(40), (20))
+			.spreadHorizontally()
+			.repeat(CONFIG.tourmalinePerChunk); // number of veins per chunk
+
+	public static ConfiguredFeature<?, ?> ORE_AMETHYST_OVERWORLD = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+					BlockInit.AMETHYST_ORE.getDefaultState(),
+					CONFIG.amethystVeinSize)) // vein size
+			.uniformRange(YOffset.getBottom(), YOffset.fixed(amethystMaxLevel))
+			//.averageDepth(YOffset.fixed(30), (20))
+			.spreadHorizontally()
+			.repeat(CONFIG.amethystPerChunk); // number of veins per chunk
+
+	public static ConfiguredFeature<?, ?> ORE_TOPAZ_OVERWORLD = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+					BlockInit.TOPAZ_ORE.getDefaultState(),
+					CONFIG.topazVeinSize)) // vein size
+			.uniformRange(YOffset.getBottom(), YOffset.fixed(topazMaxLevel))
+			//.averageDepth(YOffset.fixed(20), (20))
+			.spreadHorizontally()
+			.repeat(CONFIG.topazPerChunk); // number of veins per chunk
+
+	public static ConfiguredFeature<?, ?> ORE_ALEXANDRITE_OVERWORLD = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+					BlockInit.ALEXANDRITE_ORE.getDefaultState(),
+					CONFIG.alexandriteVeinSize)) // vein size
+			.uniformRange(YOffset.getBottom(), YOffset.fixed(alexandriteMaxLevel))
+			//.averageDepth(YOffset.fixed(10), (20))
+			.spreadHorizontally()
+			.repeat(CONFIG.alexandritePerChunk); // number of veins per chunk
+
+	public static ConfiguredFeature<?, ?> ORE_SAPPHIRE_OVERWORLD = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+					BlockInit.SAPPHIRE_ORE.getDefaultState(),
+					CONFIG.sapphireVeinSize)) // vein size
+			.uniformRange(YOffset.getBottom(), YOffset.fixed(sapphireMaxLevel))
+			//.averageDepth(YOffset.fixed(-20), (10))
+			.spreadHorizontally()
+			.repeat(CONFIG.sapphirePerChunk); // number of veins per chunk
+
+	public static ConfiguredFeature<?, ?> ORE_RUBY_OVERWORLD = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+					BlockInit.RUBY_ORE.getDefaultState(),
+					CONFIG.rubyVeinSize)) // vein size
+			.uniformRange(YOffset.getBottom(), YOffset.fixed(rubyMaxLevel))
+			//.averageDepth(YOffset.fixed(-30), (10))
+			.spreadHorizontally()
+			.repeat(CONFIG.rubyPerChunk); // number of veins per chunk
+
+	public static ConfiguredFeature<?, ?> ORE_CORUNDUM_OVERWORLD = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+					BlockInit.CORUNDUM_ORE.getDefaultState(),
+					CONFIG.conrundumVeinSize)) // vein size
+			.uniformRange(YOffset.getBottom(), YOffset.fixed(corundumMaxLevel))
+			//.averageDepth(YOffset.fixed(-40), (10))
+			.spreadHorizontally()
+			.repeat(CONFIG.conrundumPerChunk); // number of veins per chunk
+
+	public static ConfiguredFeature<?, ?> ORE_CARBONADO_OVERWORLD = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+					BlockInit.CARBONADO_ORE.getDefaultState(),
+					CONFIG.carbonadoVeinSize)) // vein size
+			.uniformRange(YOffset.getBottom(), YOffset.fixed(carbonadoMaxLevel))
+			//.averageDepth(YOffset.fixed(-50), (10))
+			.spreadHorizontally()
+			.repeat(CONFIG.carbonadoPerChunk); // number of veins per chunk
+}
+
+
+// Possible 1.18 version with new world height
 //{
 //	public static final MoreGemsConfig.Ores CONFIG = MoreGems.CONFIG.ORES;
 //
@@ -125,106 +233,3 @@ public class OreGen
 //			.spreadHorizontally()
 //			.repeat(CONFIG.carbonadoPerChunk); // number of veins per chunk
 //}
-
-//ORE_IRON = register("ore_iron", (ConfiguredFeature)((ConfiguredFeature)((ConfiguredFeature)Feature.ORE
-//		.configure(new OreFeatureConfig(
-//				IRON_ORE_TARGETS, 9)).uniformRange(YOffset.getBottom(), YOffset.fixed(63)))
-//		.spreadHorizontally())
-//		.repeat(20));
-
-
- //1.17 world height version
-{
-	public static final MoreGemsConfig.Ores CONFIG = MoreGems.CONFIG.ORES;
-
-	public static final ConfiguredFeature<?, ?> ORE_CITRINE_OVERWORLD = Feature.ORE
-			.configure(new OreFeatureConfig(
-					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-					BlockInit.CITRINE_ORE.getDefaultState(),
-					CONFIG.citrineVeinSize)) // vein size
-			.uniformRange(YOffset.getBottom(), YOffset.fixed(50))
-			//.averageDepth(YOffset.fixed(50), (20))
-			.spreadHorizontally()
-			.repeat(CONFIG.citrinePerChunk); // number of veins per chunk
-
-
-	public static ConfiguredFeature<?, ?> ORE_TOURMALINE_OVERWORLD = Feature.ORE
-			.configure(new OreFeatureConfig(
-					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-					BlockInit.TOURMALINE_ORE.getDefaultState(),
-					CONFIG.tourmalineVeinSize)) // vein size
-			.uniformRange(YOffset.getBottom(), YOffset.fixed(40))
-			//.averageDepth(YOffset.fixed(40), (20))
-			.spreadHorizontally()
-			.repeat(CONFIG.tourmalinePerChunk); // number of veins per chunk
-
-	public static ConfiguredFeature<?, ?> ORE_AMETHYST_OVERWORLD = Feature.ORE
-			.configure(new OreFeatureConfig(
-					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-					BlockInit.AMETHYST_ORE.getDefaultState(),
-					CONFIG.amethystVeinSize)) // vein size
-			.uniformRange(YOffset.getBottom(), YOffset.fixed(30))
-			//.averageDepth(YOffset.fixed(30), (20))
-			.spreadHorizontally()
-			.repeat(CONFIG.amethystPerChunk); // number of veins per chunk
-
-	public static ConfiguredFeature<?, ?> ORE_TOPAZ_OVERWORLD = Feature.ORE
-			.configure(new OreFeatureConfig(
-					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-					BlockInit.TOPAZ_ORE.getDefaultState(),
-					CONFIG.topazVeinSize)) // vein size
-			.uniformRange(YOffset.getBottom(), YOffset.fixed(20))
-			//.averageDepth(YOffset.fixed(20), (20))
-			.spreadHorizontally()
-			.repeat(CONFIG.topazPerChunk); // number of veins per chunk
-
-	public static ConfiguredFeature<?, ?> ORE_ALEXANDRITE_OVERWORLD = Feature.ORE
-			.configure(new OreFeatureConfig(
-					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-					BlockInit.ALEXANDRITE_ORE.getDefaultState(),
-					CONFIG.alexandriteVeinSize)) // vein size
-			.uniformRange(YOffset.getBottom(), YOffset.fixed(20))
-			//.averageDepth(YOffset.fixed(10), (20))
-			.spreadHorizontally()
-			.repeat(CONFIG.alexandritePerChunk); // number of veins per chunk
-
-	public static ConfiguredFeature<?, ?> ORE_SAPPHIRE_OVERWORLD = Feature.ORE
-			.configure(new OreFeatureConfig(
-					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-					BlockInit.SAPPHIRE_ORE.getDefaultState(),
-					CONFIG.sapphireVeinSize)) // vein size
-			.uniformRange(YOffset.getBottom(), YOffset.fixed(20))
-			//.averageDepth(YOffset.fixed(-20), (10))
-			.spreadHorizontally()
-			.repeat(CONFIG.sapphirePerChunk); // number of veins per chunk
-
-	public static ConfiguredFeature<?, ?> ORE_RUBY_OVERWORLD = Feature.ORE
-			.configure(new OreFeatureConfig(
-					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-					BlockInit.RUBY_ORE.getDefaultState(),
-					CONFIG.rubyVeinSize)) // vein size
-			.uniformRange(YOffset.getBottom(), YOffset.fixed(10))
-			//.averageDepth(YOffset.fixed(-30), (10))
-			.spreadHorizontally()
-			.repeat(CONFIG.rubyPerChunk); // number of veins per chunk
-
-	public static ConfiguredFeature<?, ?> ORE_CORUNDUM_OVERWORLD = Feature.ORE
-			.configure(new OreFeatureConfig(
-					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-					BlockInit.CORUNDUM_ORE.getDefaultState(),
-					CONFIG.conrundumVeinSize)) // vein size
-			.uniformRange(YOffset.getBottom(), YOffset.fixed(20))
-			//.averageDepth(YOffset.fixed(-40), (10))
-			.spreadHorizontally()
-			.repeat(CONFIG.conrundumPerChunk); // number of veins per chunk
-
-	public static ConfiguredFeature<?, ?> ORE_CARBONADO_OVERWORLD = Feature.ORE
-			.configure(new OreFeatureConfig(
-					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-					BlockInit.CARBONADO_ORE.getDefaultState(),
-					CONFIG.carbonadoVeinSize)) // vein size
-			.uniformRange(YOffset.getBottom(), YOffset.fixed(10))
-			//.averageDepth(YOffset.fixed(-50), (10))
-			.spreadHorizontally()
-			.repeat(CONFIG.carbonadoPerChunk); // number of veins per chunk
-}

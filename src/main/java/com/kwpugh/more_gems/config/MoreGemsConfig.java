@@ -19,7 +19,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 	    		+"\n***********************") 
 	    public boolean citrineEnable = true;
 	    public int citrineVeinSize = 4;
-    	public int citrineMinLevel = 0;
     	public int citrineMaxLevel = 70;
     	public int citrinePerChunk = 12;
     	
@@ -28,7 +27,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 	    		+"\n***********************")
         public boolean tourmalineEnable = true;
         public int tourmalineVeinSize = 4;
-      	public int tourmalineMinLevel = 0;
     	public int tourmalineMaxLevel = 70;
     	public int tourmalinePerChunk = 12;
     	
@@ -37,7 +35,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 	    		+"\n***********************")
         public boolean amethystEnable = true;
         public int amethystVeinSize = 4;
-      	public int amethystMinLevel = 0;
     	public int amethystMaxLevel = 60;
     	public int amethystPerChunk = 12;
     	
@@ -46,7 +43,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 	    		+"\n***********************")
         public boolean topazEnable = true;
         public int topazVeinSize = 4;
-      	public int topazMinLevel = 0;
     	public int topazMaxLevel = 60;
     	public int topazPerChunk = 12;
 
@@ -55,7 +51,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 	    		+"\n***********************")
         public boolean alexandriteEnable = true;
         public int alexandriteVeinSize = 4;
-      	public int alexandriteMinLevel = 0;
     	public int alexandriteMaxLevel = 60;
     	public int alexandritePerChunk = 12;
 
@@ -64,7 +59,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
  	    		+"\n***********************")
         public boolean sapphireEnable = true;
         public int sapphireVeinSize = 4;
-       	public int sapphireMinLevel = 0;
      	public int sapphireMaxLevel = 30;
      	public int sapphirePerChunk = 12;
      	   	
@@ -73,7 +67,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
  	    		+"\n***********************")
         public boolean rubyEnable = true;
         public int rubyVeinSize = 4;
-       	public int rubyMinLevel = 0;
      	public int rubyMaxLevel = 30;
      	public int rubyPerChunk = 12;
      	
@@ -82,7 +75,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
  	    		+"\n***********************")
         public boolean conrundumEnable = true;
         public int conrundumVeinSize = 3;
-       	public int conrundumMinLevel = 0;
      	public int conrundumMaxLevel = 20;
      	public int conrundumPerChunk = 12;
      	
@@ -91,7 +83,6 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
  	    		+"\n***********************")
         public boolean carbonadoEnable = true;
         public int carbonadoVeinSize = 3;
-       	public int carbonadoMinLevel = 0;
      	public int carbonadoMaxLevel = 15;
      	public int carbonadoPerChunk = 12;
     }
@@ -129,7 +120,7 @@ public class MoreGemsConfig extends PartitioningSerializer.GlobalData
 		public int shulkerBladeDurationTicks = 300;
 		
 		@Comment("********************************"
-				+"\nPaxels, Hammers, & Excavators"
+				+"\nBows, Paxels, Hammers, & Excavators"
 				+"\n********************************") 
 		public boolean extraToolsEnable = true;
 		public boolean bowsEnable = true;
