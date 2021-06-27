@@ -7,7 +7,7 @@ import net.minecraft.util.Identifier;
 
 public class TagInit
 {
-    // Gobber tags for adding additional blocks to paxel breaking
+    // Mod tags for adding additional blocks to paxel breaking
     public static final Tag<Block> PAXEL_ADDITIONS = TagRegistry.block(new Identifier("more_gems", "paxel_additions"));
 
     public static void registerTags()

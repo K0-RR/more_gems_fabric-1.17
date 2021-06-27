@@ -17,6 +17,7 @@ public class PlayerSpecialAbilities
 	static int enemySlownessDurationTicks = MoreGems.CONFIG.GENERAL.enemySlownessDurationTicksQuickening;
 	static int slownessLevel = MoreGems.CONFIG.GENERAL.slownessLevelQuickening;
 
+	// Effects for Quickening Enchantment called my mixin
 	public static void giveQuickening(World world, LivingEntity player, Entity target)
 	{
 		if(!world.isClient)

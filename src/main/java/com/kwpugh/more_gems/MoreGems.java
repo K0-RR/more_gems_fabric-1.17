@@ -15,7 +15,6 @@ import net.minecraft.util.Identifier;
 
 public class MoreGems implements ModInitializer
 {
-	public static final MoreGems INSTANCE = new MoreGems();
 	public static final String MOD_ID = "more_gems";
 	public static final ItemGroup MORE_GEMS_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "more_gems_group"), () -> new ItemStack(ItemInit.ALEXANDRITE));
 	public static final MoreGemsConfig CONFIG = AutoConfig.register(MoreGemsConfig.class, PartitioningSerializer.wrap(JanksonConfigSerializer::new)).getConfig();
